@@ -1,0 +1,11 @@
+//untuk menampilkan peserta dengan gaji tertinggi 
+SELECT * FROM `kawahedukasi` ORDER BY gaji DESC LIMIT 1
+
+//untuk menampilkan peserta BACKEND dengan nilai tertinggi dan gaji tertinggi
+SELECT * FROM `kawahedukasi` WHERE kelas='BACKEND' ORDER BY nilai+gaji DESC LIMIT 1
+
+//untuk melihat total peserta yang berada dalam kelas frontend
+SELECT COUNT(id) FROM `kawahedukasi` WHERE kelas='FRONTEND'
+
+//untuk menampilkan jumlah kehadiran tertinggi dan nilai tertinggi dalam kelas frontend
+SELECT * FROM `kawahedukasi` WHERE kelas='FRONTEND' ORDER BY nilai+jumlah_kehadiran DESC LIMIT 1
